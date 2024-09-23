@@ -11,6 +11,22 @@ document.getElementById('ButtonCard1').addEventListener('click', function (event
 
 })
 
+// card2 
+
+
+document.getElementById('ButtonCard2').addEventListener('click', function (event) {
+    event.preventDefault();
+    const addM = getInputFieldValueById('card2');
+    console.log(addM);
+    const b = addMoney('Bcard2', addM, event);
+    document.getElementById('card2').value = "";
+    if (b === true) {
+        document.getElementById('my_modal_5').showModal();
+        history(addM, 'Feni,Bangladesh')
+    }
+
+})
+
 document.getElementById('hist').addEventListener('click', function (event) {
     document.getElementById('Donate_cards').classList.add('hidden');
     document.getElementById("history").classList.remove('hidden');

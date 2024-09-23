@@ -31,7 +31,7 @@ function history(money, location) {
 
     const newDiv = document.createElement('div');
     newDiv.className = 'border border-gray-400 rounded-lg ml-[150px] mr-[150px] mt-6 p-16 gap-6';
-    newDiv.innerHTML = `<p>${money}Taka is donated for ${location} </p>
+    newDiv.innerHTML = `<p>${money} Taka is donated for ${location} </p>
         <p> Date: ${fDate}</p>`
     document.getElementById("history").appendChild(newDiv);
 }
