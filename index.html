@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -42,7 +42,7 @@
 
 
 <body class="lexend">
-    <header class="w-full fixed top-0 z-50 ">
+    <header class="w-full fixed top-0 z-50 bg-white bg-opacity-60 backdrop-blur-md">
         <nav class="w-full flex  justify-around items-center pt-4 pb-6 bg-light-blue text-zinc-950">
             <!-- <div class=""> -->
             <button class="btn btn-neutral">Blog</button>
@@ -56,8 +56,8 @@
             </div>
             <!-- </div> -->
         </nav>
-    </header>
-    <main class="mt-28">
+
+
         <!-- Option buttons -->
         <div class="flex justify-center gap-2 mt-10 mb-6">
             <button class="btn w-28 bg-cyan-400 text-slate-950 hover:bg-emerald-300 border-gray-400"
@@ -65,6 +65,11 @@
             <button class="btn w-28 border-gray-400
             hover:bg-emerald-300" id="hist">History</button>
         </div>
+
+
+
+    </header>
+    <main class="mt-52">
 
         <!-- modal -->
         <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
@@ -94,7 +99,7 @@
                 <div class="flex gap-14  p-8 ">
                     <img class="w-[522px] h-[389px]" src="./assets/feni.png" alt="Feni_image" alt="">
                     <div class="space-y-8 w-[522px] h-[389px] ">
-                        <div class="flex gap-3 rounded-lg bg-zinc-600 w-max p-1 pr-2">
+                        <div class="flex gap-3 rounded-lg bg-zinc-400 w-max p-1 pr-2">
                             <img src="./assets/coin.png" alt="">
                             <p><span id="Bcard1">0</span>BDT</p>
                         </div>
@@ -127,7 +132,7 @@
                 <div class="flex gap-14  p-8 ">
                     <img class="w-[522px] h-[389px]" src="./assets/feni.png" alt="Feni_image" alt="">
                     <div class="space-y-8 w-[522px] h-[389px] ">
-                        <div class="flex gap-3 rounded-lg bg-zinc-600 w-max p-1 pr-2">
+                        <div class="flex gap-3 rounded-lg bg-zinc-400 w-max p-1 pr-2">
                             <img src="./assets/coin.png" alt="">
                             <p><span id="Bcard2">600</span>BDT</p>
                         </div>
@@ -151,6 +156,41 @@
                 </div>
 
             </div>
+
+
+            <!-- card3 -->
+            <div class=" border border-gray-400 rounded-lg h-[450px] w-[1160px] mx-auto mt-6 ">
+
+                <div class="flex gap-6 p-8 ">
+                    <img class="w-[522px] h-[389px]" src="./assets/feni.png" alt="Quota_image" alt="">
+                    <div class="space-y-8 w-[522px] h-[389px] ">
+                        <div class="flex gap-3 rounded-lg bg-zinc-400 w-max p-1 pr-2">
+                            <img src="./assets/coin.png" alt="">
+                            <p><span id="Bcard3">600</span>BDT</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Aid for Injured in the <span>Quota Movement</span></h3>
+                            <p>The recent Quota movement has caused many injuries and hardships. Your support is crucial
+                                for providing medical assistance, rehabilitation, and essential supplies to those
+                                affected. Every donation alleviates suffering and aids recovery. Please consider
+                                donating to help these brave individuals in their time of need.
+
+                            </p>
+                        </div>
+                        <div class="flex flex-col gap-2 items-center">
+                            <input id="card3" type="text" class="border border-cyan-200 rounded-lg p-2 w-full"
+                                placeholder="Write Donation Here" name="">
+
+                            <button id="ButtonCard3"
+                                class="btn w-full bg-cyan-200 text-zinc-950 hover:bg-green-300 ">Donate
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
         </div>
 
 

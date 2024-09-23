@@ -27,6 +27,23 @@ document.getElementById('ButtonCard2').addEventListener('click', function (event
 
 })
 
+
+// card3
+
+document.getElementById('ButtonCard3').addEventListener('click', function (event) {
+    event.preventDefault();
+    const addM = getInputFieldValueById('card3');
+    console.log(addM);
+    const b = addMoney('Bcard3', addM, event);
+    document.getElementById('card3').value = "";
+    if (b === true) {
+        document.getElementById('my_modal_5').showModal();
+        history(addM, 'injured individuals of the Quota movement.')
+    }
+
+})
+
+
 document.getElementById('hist').addEventListener('click', function (event) {
     document.getElementById('Donate_cards').classList.add('hidden');
     document.getElementById("history").classList.remove('hidden');
