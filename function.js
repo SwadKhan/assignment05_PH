@@ -43,17 +43,31 @@ document.getElementById('ButtonCard3').addEventListener('click', function (event
 
 })
 
-
+// Swapping buttons
 document.getElementById('hist').addEventListener('click', function (event) {
+    event.preventDefault();
     document.getElementById('Donate_cards').classList.add('hidden');
     document.getElementById("history").classList.remove('hidden');
     document.getElementById('hist').classList.add('bg-cyan-400', 'text-slate-950');
     document.getElementById('donation').classList.remove('bg-cyan-400', 'text-slate-950');
 });
 
-document.getElementById('donation').addEventListener('click', function () {
+document.getElementById('donation').addEventListener('click', function (event) {
+    event.preventDefault();
     document.getElementById('history').classList.add('hidden');
     document.getElementById("Donate_cards").classList.remove('hidden');
     document.getElementById('donation').classList.add('bg-cyan-400', 'text-slate-950');
     document.getElementById('hist').classList.remove('bg-cyan-400', 'text-slate-950');
+});
+
+// blog button
+document.getElementById('blog').addEventListener('click', function (event) {
+    event.preventDefault();
+    window.location.href = "./blog.html";
+});
+
+
+document.getElementById('home').addEventListener('click', function (event) {
+    event.preventDefault();
+    window.location.href = "./index.html";
 });

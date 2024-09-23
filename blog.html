@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation</title>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .lexend {
+            font-family: "Lexend", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'customGreen': 'rgba(171, 239, 95, .45)',
+                        'light-green': 'rgba(199, 246, 199,.65)',
+                        'light-blue': 'rgba(175,238,238,.70)',
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="lexend">
+    <header class="w-full fixed top-0 z-50 bg-white bg-opacity-60 backdrop-blur-md">
+        <nav class="w-full flex  justify-around items-center pt-4 pb-6 bg-light-blue text-zinc-950">
+            <!-- <div class=""> -->
+            <button id="home" class="btn bg-green-200 border-gray-950 text-lg font-medium">Home</button>
+            <div class="flex gap-1">
+                <img src="./assets/logo.png" alt="logo">
+                <h3 class="mt-3 text-xl font-semibold">Donate Bangladesh</h3>
+            </div>
+            <div class="flex gap-1">
+                <img src="./assets/coin.png" alt="coinlogo">
+                <p><span id="Pbalance">100000</span> BDT</p>
+            </div>
+            <!-- </div> -->
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="mt-32 flex gap-1 ml-6">
+            <h3 class="text-3xl font-extrabold">Important FAQ</h3>
+            <img src="./assets/icons8-ask-question-50.png" alt="" class="mb-2 w-10">
+        </div>
+        <div class="mr-8 ml-8">
+
+            <div class="collapse collapse-arrow bg-base-200 mt-4">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                    <p>hello</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                    <p>hello</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and
+                    why is it useful?</div>
+                <div class="collapse-content">
+                    <p>hello</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-200">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles
+                    using the DOM?
+                </div>
+                <div class="collapse-content">
+                    <p>hello</p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+    <!-- <script src="./utilites.js"></script>
+    <script src="./function.js"></script> -->
+    <script>
+
+        document.getElementById('home').addEventListener('click', function () {
+            window.location.href = "./index.html";
+        });
+
+    </script>
+
+</body>
+
+</html>
