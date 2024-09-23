@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation</title>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Daisy UI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .lexend {
+            font-family: "Lexend", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'customGreen': 'rgba(171, 239, 95, .45)',
+                        'light-green': 'rgba(199, 246, 199,.65)',
+                        'light-blue': 'rgba(175,238,238,.70)',
+                    },
+                },
+            },
+        };
+    </script>
+
+</head>
+
+
+<body class="lexend">
+    <header class="w-full fixed top-0 z-50 ">
+        <nav class="w-full flex  justify-around items-center pt-4 pb-6 bg-light-blue text-zinc-950">
+            <!-- <div class=""> -->
+            <button class="btn btn-neutral">Blog</button>
+            <div class="flex gap-1">
+                <img src="./assets/logo.png" alt="logo">
+                <h3 class="mt-3 text-xl font-semibold">Donate Bangladesh</h3>
+            </div>
+            <div class="flex gap-1">
+                <img src="./assets/coin.png" alt="coinlogo">
+                <p><span id="Pbalance">100000</span> BDT</p>
+            </div>
+            <!-- </div> -->
+        </nav>
+    </header>
+    <main class="mt-28">
+        <!-- Option buttons -->
+        <div class="flex justify-center gap-2 mt-10 mb-6">
+            <button class="btn w-28 bg-cyan-400 text-slate-950 hover:bg-emerald-300 border-gray-400"
+                id="donation">Donation</button>
+            <button class="btn w-28 border-gray-400
+            hover:bg-emerald-300" id="hist">History</button>
+        </div>
+
+        <!-- modal -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box flex flex-col justify-center items-center gap-2">
+                <h3 class="text-2xl font-bold">Congrats!</h3>
+                <img src="./assets/coin.png" alt="" srcset="" class="m-2">
+                <p class="py-4 text-center">You have Donated for Humankind <br>
+                    <span class="text-xl font-bold">Successfully</span>
+                </p>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn justify-center">Close confirmation</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+
+
+        <div class="w-full h-[1px] bg-gray-300 my-4"></div>
+
+        <div id="Donate_cards">
+            <!-- card1 -->
+            <div class=" border border-gray-400 rounded-lg h-[450px] w-[1160px] mx-auto mt-6 ">
+
+                <div class="flex gap-14  p-8 ">
+                    <img class="w-[522px] h-[389px]" src="./assets/feni.png" alt="Feni_image" alt="">
+                    <div class="space-y-8 w-[522px] h-[389px] ">
+                        <div class="flex gap-3 rounded-lg bg-zinc-600 w-max p-1 pr-2">
+                            <img src="./assets/coin.png" alt="">
+                            <p><span id="Bcard1">0</span>BDT</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Donate for Flood at <span>Noakhali, Bangladesh</span></h3>
+                            <p>The recent floods in Noakhali have caused significant damage to homes infrastructure.
+                                Your
+                                donation will help provide essential supplies and to those affected by this disaster.
+                                Every
+                                contribution, big or small, makes difference. Please join us in supporting the relief
+                                efforts
+                                and making a positive impact on the lives of those in need.</p>
+                        </div>
+                        <div class="flex flex-col gap-2 items-center">
+                            <input id="card1" type="text" class="border border-cyan-200 rounded-lg p-2 w-full"
+                                placeholder="Write Donation Here" name="">
+
+                            <button id="ButtonCard1"
+                                class="btn w-56 bg-cyan-200 text-zinc-950 hover:bg-green-300 ">Donate
+                                Now</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- history -->
+        <div id="history" class="hidden">
+            <div id="Td" class="text-center text-2xl font-bold mt-8">
+                <H2>You have not made any donation yet.</H2>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="./utilites.js"></script>
+    <script src="./function.js"></script>
+</body>
+
+<footer>
+    <div class="mt-80 mb-0 h-32 w-full bg-cyan-100">
+    </div>
+</footer>
+
+</html>
