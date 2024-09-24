@@ -67,33 +67,147 @@
                 <input type="radio" name="my-accordion-2" checked="checked" />
                 <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
                 <div class="collapse-content">
-                    <p>hello</p>
+                    <p>The Document Object Model (DOM) is a programming interface for web pages, allowing programs to
+                        modify a document's structure, style, and content. It represents the page as a hierarchy of
+                        nodes and objects, enabling programming languages to interact with and manipulate the web
+                        document dynamically.</p>
                 </div>
             </div>
             <div class="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
-                <div class="collapse-content">
-                    <p>hello</p>
+                <div class="collapse-content text-wrap">
+                    <p>To manipulate HTML elements with JavaScript, one must first "select" or link the elements to
+                        interact with. This is done by referencing elements within the DOM using selectors. Several
+                        methods are available for selecting elements, such as:
+
+                        getElementById()
+                        getElementsByClassName()
+                        getElementsByTagName()
+                        querySelector()
+                        querySelectorAll()
+                        Each method targets elements based on IDs, classes, tags, or general selectors. Once selected,
+                        the element is assigned to a variable for further manipulation. For instance: <br>1.const
+                        blackColor = document.querySelector(".black");<br>
+                        2.const cartButton = document.getElementById("button");<br>
+                        3.const itemTag = document.getElementsByTagName("h3")[0];<br>
+                        All DOM selectors are invoked through the document object, followed by the relevant method.</p>
                 </div>
             </div>
+
             <div class="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and
                     why is it useful?</div>
                 <div class="collapse-content">
-                    <p>hello</p>
+                    <p>Event Delegation is a pattern that allows event handling at a higher level by adding a single
+                        event listener to a parent element rather than individual child elements. This approach
+                        simplifies managing multiple similar elements.</p>
+
+                    <span class="text-xl font-medium">
+                        In traditional event handling, developers attach event listeners directly to each element:
+                    </span>
+
+                    <pre class="whitespace-pre-wrap overflow-x-auto break-all">
+            <code>
+            const button1 = document.getElementById('button1');
+            const button2 = document.getElementById('button2');
+            button1.addEventListener('click', () => {
+                // Handle button1 click
+            });
+            button2.addEventListener('click', () => {
+                // Handle button2 click
+            });
+            </code>
+                    </pre>
+
+                    <span class="text-xl font-medium">With Event Delegation, one listener is added to the common parent,
+                        and the target element is identified dynamically:</span>
+
+                    <pre class="whitespace-pre-wrap overflow-x-auto break-all">
+            <code>
+            const commonParent = document.getElementById('commonParent');
+            commonParent.addEventListener('click', (event) => {
+                const target = event.target;
+                if (target.tagName === 'BUTTON') {
+                    // Handle button click
+                }
+            });
+            </code>
+                    </pre>
+
+                    <p>
+                        <span class="text-xl font-semibold">Benefits of Event Delegation:</span><br>
+                        1. Reduced Event Listeners: Fewer event listeners make code more concise and manageable.<br>
+                        2. Dynamic Content Handling: Automatically handles newly added elements without additional
+                        bindings.<br>
+                        3. Improved Performance: Reduces overhead with fewer listeners, enhancing performance in large
+                        applications.<br>
+                        4. Maintenance: Centralizes event logic, making the code more scalable and easier to maintain.
+                    </p>
                 </div>
             </div>
+
             <div class="collapse collapse-arrow bg-base-200">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles
-                    using the DOM?
-                </div>
+                    using the DOM?</div>
                 <div class="collapse-content">
-                    <p>hello</p>
+                    <p>Manipulating an element's attributes and styles in the DOM can be done using the following
+                        methods:</p>
+
+                    <p><strong>1. Manipulating Attributes:</strong></p>
+                    <p>Attributes like <code>src</code>, <code>href</code>, <code>class</code>, and more can be accessed
+                        or changed using the <code>setAttribute()</code> method or by directly modifying the element's
+                        properties.</p>
+
+                    <ul>
+                        <li><strong>Using <code>setAttribute()</code>:</strong></li>
+                        <pre class="whitespace-pre-wrap overflow-x-auto break-all">
+            <code>
+            const img = document.getElementById('image');
+            img.setAttribute('src', 'newImage.jpg'); // Changes the image source
+            </code>
+                        </pre>
+
+                        <li><strong>Direct Property Access:</strong></li>
+                        <pre class="whitespace-pre-wrap overflow-x-auto break-all">
+            <code>
+            const link = document.getElementById('myLink');
+            link.href = 'https://example.com'; // Changes the href attribute of a link
+            </code>
+                        </pre>
+                    </ul>
+
+                    <p><strong>2. Manipulating Styles:</strong></p>
+                    <p>The <code>style</code> property allows you to directly change the inline CSS of an element:</p>
+
+                    <ul>
+                        <li><strong>Setting a Style:</strong></li>
+                        <pre class="whitespace-pre-wrap overflow-x-auto break-all">
+            <code>
+            const element = document.getElementById('myElement');
+            element.style.backgroundColor = 'blue'; // Sets the background color
+            </code>
+                        </pre>
+
+                        <li><strong>Adding/Removing Classes:</strong></li>
+                        <p>You can manage an element's CSS classes using the <code>classList</code> API:</p>
+                        <pre class="whitespace-pre-wrap overflow-x-auto break-all">
+            <code>
+            element.classList.add('newClass'); // Adds a CSS class
+            element.classList.remove('oldClass'); // Removes a CSS class
+            element.classList.toggle('active'); // Toggles a class on or off
+            </code>
+                        </pre>
+                    </ul>
+
+                    <p>By using these methods, you can dynamically control both the attributes and the visual appearance
+                        of your HTML elements in real-time.</p>
                 </div>
             </div>
+
+
 
         </div>
 
