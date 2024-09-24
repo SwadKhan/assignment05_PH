@@ -30,7 +30,7 @@ function history(money, location) {
     }
 
     const newDiv = document.createElement('div');
-    newDiv.className = 'border border-gray-400 rounded-lg lg:ml-[150px] lg:mr-[150px] mx-auto mr-4 ml-4 mt-6 p-16 gap-6';
+    newDiv.className = 'border border-gray-400 rounded-lg lg:ml-[150px] lg:mr-[150px] mx-auto mr-2 ml-2 mt-6 lg:p-16 p-10 gap-6';
     newDiv.innerHTML = `<p>${money} Taka is donated for ${location} </p>
         <p> Date: ${fDate}</p>`
     document.getElementById("history").appendChild(newDiv);
